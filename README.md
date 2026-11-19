@@ -2,8 +2,6 @@
 
 ![Logo](zoldax_logo.jpg)
 
-# 🧠 Z O L D A X . I A
-
 **MiniGPT construído do zero com PyTorch**
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)](https://python.org)
