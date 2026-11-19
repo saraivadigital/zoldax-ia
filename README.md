@@ -9,6 +9,8 @@
 [![Flask](https://img.shields.io/badge/Flask-Web%20UI-lightgrey?style=flat-square&logo=flask)](https://flask.palletsprojects.com)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
+![Frontend](zoldax_web_frontend.jpg)
+
 </div>
 
 ---
@@ -95,7 +97,11 @@ Quanto mais texto, melhores as respostas.
 ```bash
 # Treinamento inicial
 python3 zoldax.py --treino
+```
 
+![Treino](zoldax_treino.jpg)
+
+```
 # Com número de iterações customizado
 python3 zoldax.py --treino --steps 5000
 
@@ -132,6 +138,8 @@ Para descobrir seu IP:
 ```bash
 ip a | grep "inet " | grep -v 127
 ```
+
+![Web](zoldax_web.jpg)
 
 ---
 
