@@ -1,5 +1,7 @@
 <div align="center">
 
+![Logo](zoldax_logo.jpg)
+
 # 🧠 Z O L D A X . I A
 
 **MiniGPT construído do zero com PyTorch**
