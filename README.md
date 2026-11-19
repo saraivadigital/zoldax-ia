@@ -1,6 +1,6 @@
 <div align="center">
 
-# Z O L D A X . I A
+# 🧠 Z O L D A X . I A
 
 **MiniGPT construído do zero com PyTorch**
 
