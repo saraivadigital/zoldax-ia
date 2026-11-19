@@ -1,0 +1,33 @@
+# Ambiente virtual
+torch-env/
+venv/
+.env/
+
+# Modelo treinado (arquivo grande)
+*.pt
+*.pth
+*.bin
+
+# Histórico e aprendizado pessoal
+conversas.jsonl
+aprendizado.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.log

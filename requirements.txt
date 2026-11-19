@@ -1,0 +1,12 @@
+# Zoldax.IA — dependências
+# Instale com: pip install -r requirements.txt
+
+# Deep learning (CPU)
+# Para GPU: pip install torch --index-url https://download.pytorch.org/whl/cu121
+torch
+
+# Numérico
+numpy
+
+# Interface web
+flask

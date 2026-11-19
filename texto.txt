@@ -1,0 +1,225 @@
+# SEGURANÇA CIBERNÉTICA — CORPUS DE TREINAMENTO ZOLDAX.IA
+
+## RED TEAM
+
+Red Team é um grupo de especialistas em segurança cibernética responsável por simular ataques reais contra sistemas, redes, aplicações e processos de uma organização. O objetivo é identificar vulnerabilidades e falhas de segurança antes que elas sejam exploradas por criminosos.
+
+Esses profissionais atuam de forma semelhante a um invasor, utilizando técnicas de teste e exploração controladas para avaliar o nível de proteção da empresa. Durante os exercícios, o Red Team busca descobrir pontos fracos em tecnologias, procedimentos e até no comportamento dos usuários.
+
+O trabalho do Red Team contribui para o fortalecimento da segurança da informação, permitindo que a organização corrija vulnerabilidades, melhore seus controles de defesa e aumente sua capacidade de detectar e responder a incidentes.
+
+Em muitas empresas, o Red Team trabalha em conjunto com o Blue Team, que é responsável pela defesa e monitoramento dos sistemas. Essa colaboração ajuda a criar um ambiente mais seguro e preparado contra ameaças reais.
+
+As fases de um exercício de Red Team incluem reconhecimento, varredura, exploração, pós-exploração e relatório. Em cada fase o time coleta informações, identifica fraquezas, testa explorações e documenta tudo para o cliente.
+
+Red Team avançado utiliza técnicas de APT, sigla para Advanced Persistent Threat, simulando grupos de atacantes sofisticados que permanecem dentro da rede por longos períodos sem serem detectados.
+
+## BLUE TEAM
+
+Blue Team é o grupo responsável pela defesa dos sistemas de uma organização. Enquanto o Red Team ataca, o Blue Team monitora, detecta e responde a incidentes de segurança em tempo real.
+
+As principais atividades do Blue Team incluem monitoramento de logs, análise de tráfego de rede, resposta a incidentes, gestão de vulnerabilidades e hardening de sistemas.
+
+O Blue Team utiliza ferramentas como SIEM, IDS, IPS, firewalls e EDR para detectar comportamentos anômalos e bloquear ameaças antes que causem danos.
+
+Um Blue Team eficiente mantém playbooks atualizados com procedimentos de resposta a incidentes, garantindo que toda a equipe saiba como agir diante de diferentes tipos de ataque.
+
+## PURPLE TEAM
+
+Purple Team é a integração entre Red Team e Blue Team. O objetivo é maximizar a eficácia de ambos os times, promovendo colaboração e troca de conhecimento durante os exercícios.
+
+No modelo Purple Team, o Red Team compartilha suas técnicas com o Blue Team em tempo real, permitindo que a defesa melhore suas capacidades de detecção enquanto o ataque acontece.
+
+## PENTEST
+
+Pentest, ou teste de penetração, é uma avaliação de segurança controlada onde profissionais tentam explorar vulnerabilidades em sistemas com autorização do proprietário. O objetivo é identificar e corrigir falhas antes que atacantes reais as explorem.
+
+As fases de um pentest são: planejamento e reconhecimento, varredura e enumeração, exploração, pós-exploração, e elaboração do relatório final com as vulnerabilidades encontradas e recomendações de correção.
+
+Existem três tipos principais de pentest. O pentest caixa branca fornece ao testador todas as informações sobre o ambiente. O pentest caixa cinza fornece informações parciais. O pentest caixa preta não fornece nenhuma informação prévia, simulando um ataque externo real.
+
+O relatório de pentest deve conter resumo executivo para gestores, descrição técnica das vulnerabilidades, prova de conceito de cada falha encontrada, classificação de risco e recomendações detalhadas de correção.
+
+## VULNERABILIDADES WEB
+
+SQL Injection é uma das vulnerabilidades mais antigas e ainda mais comuns na web. Ocorre quando dados fornecidos pelo usuário são inseridos diretamente em consultas SQL sem sanitização. Um atacante pode manipular a query para extrair dados, modificar registros ou até executar comandos no servidor.
+
+Para prevenir SQL Injection é necessário usar consultas parametrizadas, prepared statements, e validar todos os dados de entrada. Nunca concatenar strings diretamente em queries SQL.
+
+XSS, ou Cross-Site Scripting, permite que atacantes injetem scripts maliciosos em páginas web visualizadas por outros usuários. Existem três tipos: XSS refletido, XSS armazenado e XSS baseado em DOM.
+
+XSS armazenado é o mais perigoso pois o script malicioso fica salvo no banco de dados e é executado toda vez que a página é acessada. XSS refletido depende de enganar o usuário para clicar em um link especialmente criado.
+
+Para prevenir XSS é necessário escapar todos os dados de saída, implementar Content Security Policy, usar atributos HttpOnly e Secure nos cookies, e validar entradas do usuário.
+
+CSRF, ou Cross-Site Request Forgery, força um usuário autenticado a executar ações indesejadas em uma aplicação web. O atacante cria uma página maliciosa que faz requisições para o site alvo usando as credenciais da vítima.
+
+IDOR, ou Insecure Direct Object Reference, ocorre quando uma aplicação usa identificadores controláveis pelo usuário para acessar objetos diretamente sem verificar se o usuário tem permissão. Por exemplo, trocar o ID na URL para acessar dados de outro usuário.
+
+Path Traversal permite que atacantes acessem arquivos fora do diretório raiz da aplicação usando sequências como ponto ponto barra. O atacante pode ler arquivos sensíveis do sistema operacional.
+
+File Upload vulnerabilities ocorrem quando uma aplicação permite o upload de arquivos sem validar adequadamente o tipo, conteúdo ou nome. Um atacante pode fazer upload de um shell web e executar comandos no servidor.
+
+## CRIPTOGRAFIA
+
+Criptografia é a ciência de transformar informações em um formato ilegível para protegê-las contra acesso não autorizado. É fundamental para a segurança de comunicações, armazenamento de dados e autenticação.
+
+Criptografia simétrica usa a mesma chave para cifrar e decifrar dados. É mais rápida mas apresenta o desafio de como compartilhar a chave com segurança. Exemplos de algoritmos simétricos são AES e ChaCha20.
+
+AES, ou Advanced Encryption Standard, é o algoritmo de criptografia simétrica mais utilizado no mundo. Opera em blocos de 128 bits e suporta chaves de 128, 192 ou 256 bits. É considerado seguro para uso atual.
+
+Criptografia assimétrica usa um par de chaves: chave pública para cifrar e chave privada para decifrar. Resolve o problema de distribuição de chaves. Exemplos são RSA e ECC.
+
+RSA é um algoritmo de criptografia assimétrica baseado na dificuldade de fatorar números primos grandes. É amplamente usado para troca de chaves e assinaturas digitais, mas é mais lento que algoritmos simétricos.
+
+Hashing é uma função matemática que transforma dados de qualquer tamanho em uma saída de tamanho fixo chamada hash ou digest. É uma operação de mão única, não é possível reverter o hash para obter o dado original.
+
+MD5 e SHA-1 são algoritmos de hash considerados inseguros para aplicações criptográficas modernas devido a vulnerabilidades conhecidas. SHA-256 e SHA-3 são as recomendações atuais.
+
+Sal, ou salt, é um valor aleatório adicionado aos dados antes do hashing para dificultar ataques de dicionário e rainbow tables. É essencial ao armazenar senhas em bancos de dados.
+
+## REDES E PROTOCOLOS
+
+TCP IP é a base da comunicação na internet. O protocolo TCP garante entrega confiável de dados através de handshake de três vias, controle de fluxo e retransmissão de pacotes perdidos.
+
+UDP é um protocolo sem conexão que prioriza velocidade em detrimento da confiabilidade. É usado em aplicações onde pequenas perdas são toleráveis, como streaming de vídeo e jogos online.
+
+DNS, ou Domain Name System, traduz nomes de domínio em endereços IP. Ataques comuns contra DNS incluem DNS Spoofing, DNS Cache Poisoning e DNS Hijacking.
+
+HTTPS usa TLS para cifrar a comunicação entre cliente e servidor. Protege contra interceptação e modificação dos dados em trânsito. Certificados digitais garantem a autenticidade do servidor.
+
+Firewall é um sistema que monitora e controla o tráfego de rede com base em regras de segurança predefinidas. Pode ser baseado em hardware, software ou ambos.
+
+IDS, ou Intrusion Detection System, monitora o tráfego de rede em busca de atividades suspeitas e gera alertas. IPS, ou Intrusion Prevention System, além de detectar, bloqueia automaticamente as ameaças.
+
+VPN, ou Virtual Private Network, cria um túnel criptografado entre dois pontos na internet, protegendo os dados em trânsito e mascarando o endereço IP real do usuário.
+
+## ENGENHARIA SOCIAL
+
+Engenharia social é a manipulação psicológica de pessoas para obter informações confidenciais, acesso a sistemas ou realizar ações que comprometam a segurança. É uma das técnicas mais eficazes porque explora o fator humano.
+
+Phishing é o tipo mais comum de engenharia social. O atacante envia e-mails, mensagens ou cria sites falsos que imitam organizações legítimas para roubar credenciais, dados financeiros ou instalar malware.
+
+Spear Phishing é uma versão direcionada do phishing, onde o atacante personaliza o ataque para uma vítima específica usando informações coletadas previamente sobre ela.
+
+Vishing é o phishing realizado por voz, geralmente por telefone. O atacante se passa por suporte técnico, banco ou outra entidade confiável para extrair informações sensíveis.
+
+Pretexting envolve criar um cenário falso convincente para manipular a vítima. O atacante constrói uma identidade fictícia e uma história elaborada para ganhar a confiança da vítima.
+
+Baiting usa a curiosidade ou ganância da vítima como isca. Um exemplo clássico é deixar um pen drive infectado em um local público esperando que alguém o conecte ao computador.
+
+## MALWARE
+
+Malware é qualquer software criado com intenção maliciosa. Os principais tipos são vírus, worms, trojans, ransomware, spyware, adware e rootkits.
+
+Vírus é um tipo de malware que se anexa a arquivos legítimos e se replica quando o arquivo infectado é executado. Precisa de interação humana para se propagar.
+
+Worm é um malware que se replica automaticamente pela rede sem necessidade de interação humana. Pode se espalhar rapidamente causando sobrecarga nos sistemas.
+
+Trojan, ou cavalo de Tróia, é um malware disfarçado de software legítimo. Quando executado, abre uma porta traseira no sistema permitindo acesso remoto pelo atacante.
+
+Ransomware é um tipo de malware que cifra os arquivos da vítima e exige pagamento de resgate para fornecer a chave de decriptação. Causou prejuízos bilionários em organizações ao redor do mundo.
+
+Rootkit é um malware projetado para ocultar sua presença e a de outros programas maliciosos no sistema. Opera em nível profundo do sistema operacional dificultando sua detecção e remoção.
+
+Spyware monitora e coleta informações sobre as atividades do usuário sem seu conhecimento, como teclas digitadas, capturas de tela e histórico de navegação.
+
+## FERRAMENTAS DE SEGURANÇA
+
+Nmap é uma ferramenta de varredura de rede usada para descobrir hosts, portas abertas, serviços em execução e sistemas operacionais. É essencial em qualquer pentest ou auditoria de segurança.
+
+Burp Suite é uma plataforma de testes de segurança web que permite interceptar, analisar e modificar requisições HTTP e HTTPS. É amplamente usada por profissionais de segurança para encontrar vulnerabilidades em aplicações web.
+
+Metasploit é um framework de testes de penetração que oferece uma vasta coleção de exploits, payloads e ferramentas auxiliares. Facilita o desenvolvimento e execução de ataques controlados.
+
+Wireshark é um analisador de protocolos de rede que captura e exibe o tráfego em tempo real. É essencial para análise forense de rede e troubleshooting.
+
+Hashcat é uma ferramenta de quebra de senhas por força bruta e ataques de dicionário. Suporta centenas de algoritmos de hash e pode utilizar GPU para acelerar o processo.
+
+John the Ripper é outra ferramenta popular de quebra de senhas que suporta diversos formatos e tipos de ataque, incluindo força bruta, dicionário e regras.
+
+Gobuster e ffuf são ferramentas de fuzzing para descoberta de diretórios, arquivos e subdomínios em aplicações web. Essenciais na fase de reconhecimento de um pentest web.
+
+SQLmap é uma ferramenta automatizada para detecção e exploração de vulnerabilidades de SQL Injection. Suporta diversos bancos de dados e técnicas de injeção.
+
+## OSINT
+
+OSINT, ou Open Source Intelligence, é a coleta e análise de informações a partir de fontes públicas e abertas. É amplamente usada tanto por profissionais de segurança quanto por atacantes na fase de reconhecimento.
+
+Fontes comuns de OSINT incluem redes sociais, registros públicos, sites de empresas, repositórios de código, certificados SSL, registros DNS e bancos de dados de vazamentos.
+
+Shodan é um motor de busca especializado em dispositivos conectados à internet, como servidores, câmeras, roteadores e sistemas industriais. Permite encontrar dispositivos vulneráveis expostos na internet.
+
+Maltego é uma ferramenta de OSINT e análise de vínculos que permite visualizar relações entre pessoas, domínios, endereços IP e outras entidades em um grafo interativo.
+
+theHarvester é uma ferramenta para coleta de e-mails, subdomínios, hosts, nomes de funcionários e outras informações sobre um alvo a partir de fontes públicas.
+
+## CTF
+
+CTF, ou Capture The Flag, é uma competição de segurança cibernética onde os participantes resolvem desafios para encontrar strings secretas chamadas flags. É uma excelente forma de aprender e praticar habilidades de segurança ofensiva.
+
+As categorias mais comuns em CTFs são web, criptografia, forense, engenharia reversa, pwn ou exploração binária, esteganografia e OSINT.
+
+Desafios de web em CTFs geralmente envolvem vulnerabilidades como SQL Injection, XSS, CSRF, IDOR, injeção de comandos e falhas de autenticação.
+
+Desafios de criptografia envolvem quebrar cifras, analisar protocolos criptográficos mal implementados e encontrar falhas matemáticas em esquemas de criptografia.
+
+Desafios de forense envolvem análise de imagens de disco, capturas de tráfego de rede, análise de memória, recuperação de arquivos deletados e análise de logs.
+
+Esteganografia é a técnica de ocultar informações dentro de outros arquivos, como imagens, áudios ou vídeos. Desafios de esteganografia em CTFs exigem encontrar e extrair dados ocultos.
+
+Pwn ou exploração binária envolve encontrar e explorar vulnerabilidades em programas compilados, como buffer overflow, format string, use after free e heap exploitation.
+
+## WAZUH E SIEM
+
+Wazuh é uma plataforma open source de segurança que fornece SIEM, XDR e HIDS. É amplamente utilizada para monitoramento de segurança, detecção de ameaças e conformidade.
+
+SIEM, ou Security Information and Event Management, é uma solução que coleta, correlaciona e analisa eventos de segurança de múltiplas fontes em tempo real para detectar e responder a incidentes.
+
+O Wazuh coleta logs de agentes instalados nos endpoints, normaliza os dados e aplica regras de detecção para identificar comportamentos suspeitos, malware, intrusões e violações de política.
+
+Regras do Wazuh são escritas em XML e definem padrões para detectar eventos específicos. É possível criar regras personalizadas para atender às necessidades de cada ambiente.
+
+O Wazuh integra com o OpenSearch ou Elasticsearch para armazenamento e visualização dos dados através de dashboards no Kibana ou OpenSearch Dashboards.
+
+## ACTIVE DIRECTORY
+
+Active Directory é o serviço de diretório da Microsoft usado para gerenciar usuários, computadores e recursos em redes Windows. É um alvo comum em ataques corporativos.
+
+Ataques comuns ao Active Directory incluem Pass the Hash, Pass the Ticket, Kerberoasting, AS-REP Roasting, Golden Ticket, Silver Ticket e DCSync.
+
+Kerberoasting é uma técnica que explora o protocolo Kerberos para extrair hashes de senhas de contas de serviço e quebrá-los offline. Contas de serviço com SPNs registrados são os alvos.
+
+BloodHound é uma ferramenta de análise do Active Directory que mapeia as relações entre objetos e identifica caminhos de ataque para comprometer o domínio.
+
+GPO, ou Group Policy Object, são políticas aplicadas a usuários e computadores em um domínio. Uma GPO mal configurada pode ser explorada para escalar privilégios ou executar código malicioso.
+
+## CONCEITOS GERAIS DE SEGURANÇA
+
+Princípio do menor privilégio determina que usuários e sistemas devem ter apenas as permissões mínimas necessárias para realizar suas funções. Reduz o impacto de comprometimentos.
+
+Defense in depth é uma estratégia de segurança que usa múltiplas camadas de controles para proteger sistemas. Se uma camada falha, as outras ainda oferecem proteção.
+
+Zero Trust é um modelo de segurança que não confia automaticamente em nada, seja dentro ou fora da rede corporativa. Cada acesso é verificado explicitamente.
+
+Hardening é o processo de reduzir a superfície de ataque de um sistema desabilitando serviços desnecessários, aplicando patches, configurando permissões e seguindo boas práticas de segurança.
+
+Gestão de vulnerabilidades é o processo contínuo de identificar, classificar, corrigir e mitigar vulnerabilidades em sistemas e aplicações. Envolve varreduras regulares e priorização baseada em risco.
+
+CVSS, ou Common Vulnerability Scoring System, é um sistema padronizado para avaliar a severidade de vulnerabilidades de segurança. As pontuações vão de zero a dez, sendo dez a mais crítica.
+
+CVE, ou Common Vulnerabilities and Exposures, é um sistema de identificação pública de vulnerabilidades conhecidas. Cada vulnerabilidade recebe um identificador único no formato CVE mais ano mais número.
+
+Threat Intelligence é o conhecimento sobre ameaças atuais e emergentes que ajuda organizações a tomar decisões informadas sobre sua segurança. Inclui informações sobre táticas, técnicas e procedimentos de atacantes.
+
+Resposta a incidentes é o processo estruturado para lidar com violações de segurança. As fases são preparação, identificação, contenção, erradicação, recuperação e lições aprendidas.
+
+Forense digital é a aplicação de técnicas científicas para coletar, preservar e analisar evidências digitais de forma que sejam admissíveis em processos legais.
+
+## SOBRE O ZOLDAX
+
+Zoldax é uma inteligência artificial desenvolvida por Saraiva Digital.
+
+O Zoldax foi construído do zero usando PyTorch, implementando a arquitetura Transformer com tokenizer BPE próprio, sem depender de frameworks de alto nível.
+
+O Zoldax aprende continuamente através de exemplos fornecidos pelo usuário e pode ser retreinado com novos dados a qualquer momento.
