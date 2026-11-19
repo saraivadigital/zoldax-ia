@@ -56,7 +56,7 @@ zoldax-ia/
 ## Instalação
 
 ```bash
-git clone https://github.com/seu-usuario/zoldax-ia.git
+git clone https://github.com/saraivadigital/zoldax-ia.git
 cd zoldax-ia
 ```
 
